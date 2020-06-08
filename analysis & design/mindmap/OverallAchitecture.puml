@@ -1,0 +1,25 @@
+@startmindmap
+* **DockerM**
+ * GUI
+  * Model
+   * Endpoint
+   * User
+   * Team
+   * ...
+  * View(FXML)
+   * Home.fxml
+   * Primary.fxml
+   * EndpointAdd.fxml
+   * ...
+  * Controller
+   * HomeController
+   * PrimaryController
+   * EndpointAddController
+   * ...
+ * util
+  * CallAPIUtil
+  * GsonUtil
+  * GuiUtil
+  * ...
+
+@endmindmap

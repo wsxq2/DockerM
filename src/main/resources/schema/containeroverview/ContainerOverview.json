@@ -1,0 +1,61 @@
+{
+  "Command": "/portainer",
+  "Created": 1589291921,
+  "HostConfig": {
+    "NetworkMode": "bridge"
+  },
+  "Id": "d04a4b75f6e5b645de025e1d6613dffda8e62cb44a71339a6ee77379b8917979",
+  "Image": "potainertest:latest",
+  "ImageID": "sha256:f29bb3d174b5750aecb822c3dc16b5226133c78a71ef72572dfa98b0e3d378a2",
+  "Labels": {},
+  "Mounts": [
+    {
+      "Destination": "/data",
+      "Driver": "local",
+      "Mode": "",
+      "Name": "1055ccd6e0d07aceefa973e3478d0208f3c61ae3015449524353806b1fa9dbca",
+      "Propagation": "",
+      "RW": true,
+      "Source": "",
+      "Type": "volume"
+    }
+  ],
+  "Names": [
+    "/inspiring_feistel"
+  ],
+  "NetworkSettings": {
+    "Networks": {
+      "bridge": {
+        "Aliases": null,
+        "DriverOpts": null,
+        "EndpointID": "",
+        "Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "IPAMConfig": {},
+        "IPAddress": "",
+        "IPPrefixLen": 0,
+        "IPv6Gateway": "",
+        "Links": null,
+        "MacAddress": "",
+        "NetworkID": "e9071335f6b8d625e488e3353532a7a7c820dc9fe509e5f9190094d2fdcf8485"
+      }
+    }
+  },
+  "Portainer": {
+    "ResourceControl": {
+      "AdministratorsOnly": true,
+      "Id": 76,
+      "Public": false,
+      "ResourceId": "d04a4b75f6e5b645de025e1d6613dffda8e62cb44a71339a6ee77379b8917979",
+      "SubResourceIds": [],
+      "System": false,
+      "TeamAccesses": [],
+      "Type": 1,
+      "UserAccesses": []
+    }
+  },
+  "Ports": [],
+  "State": "exited",
+  "Status": "Exited (1) 10 days ago"
+}

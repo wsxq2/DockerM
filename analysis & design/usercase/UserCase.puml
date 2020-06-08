@@ -1,0 +1,84 @@
+@startuml
+skinparam monochrome true
+title Overall Architecture
+
+left to right direction
+
+(User) -- DockerM
+DockerM -- (Portainer)
+rectangle DockerM {
+}
+
+newpage
+skinparam monochrome true
+left to right direction
+
+title Prepare Work
+
+:Administrator: as A
+
+A -- (prepare Endpoints)
+note top of (prepare Endpoints) : not a part of DockerM
+
+(prepare Endpoints) ..> (prepare server) : include
+(prepare Endpoints) ..> (prepare agents) : include
+
+(prepare server) ..> (install Docker) : include
+(prepare server) ..> (install Portainer) : include
+(prepare agents) ..> (install Docker) : include
+(prepare agents) ..> (install Portainer Agent) : include
+
+note right of (install Portainer Agent): optional
+
+newpage
+skinparam monochrome true
+title DockerM
+left to right direction
+
+:User: as U
+:Administrator: as A
+:Normal User: as NU
+
+(use normal User UI) as UUUI
+NU -- (Login with Normal User account)
+(Login with Normal User account) -- UUUI
+
+(use Administrator UI) as UAUI
+(init system) .> (create an Administrator account) : include
+
+A -- (init system)
+A -- (Login with Administrator account)
+
+(Login with Administrator account) -- UAUI
+
+UAUI ..> UUUI : extends
+
+UAUI ..> (manage Endpoints: CRUD) : include
+note right of (manage Endpoints: CRUD) : CRUD is Create, Remove, Update, Delete
+UAUI ..> (manage Endpoint Groups: CRUD) : include
+UAUI ..> (manage Endpoint Tags: CD) : include
+UAUI ..> (view special Endpoint Events) : include
+UAUI ..> (manage Users: CRUD) : include
+UAUI ..> (manage Teams: CRUD) : include
+UAUI ..> (manage App Templates: CRUD) : include
+UAUI ..> (manage Registries: CRUD) : include
+UAUI ..> (manage Settings: U) : include
+
+
+(use Endpoints) as UE
+UUUI ..> UE: include
+UUUI ..> (use App Templates): include
+UUUI ..> (view his own Registries): include
+
+UE ..> (manage Containers: CRUD): include
+UE ..> (manage Images: CRUD): include
+UE ..> (manage Volumes: CRUD): include
+UE ..> (manage Network: CRUD): include
+UE ..> (view Endpoint info): include
+
+U <.. NU: extends
+U <.. A: extends
+
+
+
+@enduml

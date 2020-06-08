@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>top.wsxq2.dockerm.util</OriginalElement>
+  <nodes>
+    <node x="523.0" y="0.0">top.wsxq2.dockerm.util.GuiUtil</node>
+    <node x="134.5" y="472.0">top.wsxq2.dockerm.util.CallApiUtilTest</node>
+    <node x="47.0" y="236.0">top.wsxq2.dockerm.util.CallApiUtil</node>
+    <node x="132.0" y="0.0">top.wsxq2.dockerm.util.CachedData</node>
+    <node x="0.0" y="67.0">top.wsxq2.dockerm.util.GsonUtil</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="top.wsxq2.dockerm.util.CallApiUtilTest" target="top.wsxq2.dockerm.util.CallApiUtil">
+      <point x="-42.0" y="-82.0" />
+      <point x="176.5" y="447.0" />
+      <point x="132.75" y="447.0" />
+      <point x="-85.75" y="93.0" />
+    </edge>
+    <edge source="top.wsxq2.dockerm.util.CallApiUtil" target="top.wsxq2.dockerm.util.CachedData">
+      <point x="0.0" y="-93.0" />
+      <point x="-86.5" y="93.0" />
+    </edge>
+    <edge source="top.wsxq2.dockerm.util.CallApiUtil" target="top.wsxq2.dockerm.util.GsonUtil">
+      <point x="-114.33333333333331" y="-93.0" />
+      <point x="104.16666666666669" y="211.0" />
+      <point x="56.0" y="211.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="412.0" y="318.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

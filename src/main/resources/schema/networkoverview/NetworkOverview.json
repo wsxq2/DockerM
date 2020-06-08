@@ -1,0 +1,36 @@
+{
+  "Attachable": false,
+  "ConfigFrom": {
+    "Network": ""
+  },
+  "ConfigOnly": false,
+  "Containers": {},
+  "Created": "2019-12-31T15:33:28.281614+08:00",
+  "Driver": "null",
+  "EnableIPv6": false,
+  "IPAM": {
+    "Config": [],
+    "Driver": "default",
+    "Options": null
+  },
+  "Id": "522c038f8465d98c9b25dba55e5dc57daf2e14ec7f54b5d8f5f2c51775942944",
+  "Ingress": false,
+  "Internal": false,
+  "Labels": {},
+  "Name": "none",
+  "Options": {},
+  "Portainer": {
+    "ResourceControl": {
+      "AdministratorsOnly": false,
+      "Id": 0,
+      "Public": true,
+      "ResourceId": "522c038f8465d98c9b25dba55e5dc57daf2e14ec7f54b5d8f5f2c51775942944",
+      "SubResourceIds": [],
+      "System": true,
+      "TeamAccesses": [],
+      "Type": 4,
+      "UserAccesses": []
+    }
+  },
+  "Scope": "local"
+}

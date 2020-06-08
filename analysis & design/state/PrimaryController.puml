@@ -1,0 +1,32 @@
+@startuml
+hide empty description
+
+[*] -down-> started:start
+state started{
+state "initial state" as IS
+
+
+
+[*] --> IS
+IS --> handlingNew: File->New
+handlingNew --> loadedEndpoint : Submit
+IS --> loadedEndpoint : File->Open Recent
+IS --> openingFile : File->Open
+openingFile --> loadedEndpoint : select file
+loadedEndpoint --> savingFile : [first]/File->Save
+loadedEndpoint --> loadedEndpoint : [nonfirst]/File->Save
+loadedEndpoint --> savingFile : File->Save As
+loadedEndpoint --> IS : File->Close
+savingFile --> loadedEndpoint : select file
+}
+started -> [*] : File->Quit
+
+started --> viewingShortcut : Help->Shortcut
+viewingShortcut -> started : close Shortcut Window
+started --> viewingHelp : Help->Help
+viewingHelp -> started : close Help Window
+started --> viewingAbout: Help->About
+viewingAbout -> started : close About Window
+
+
+@enduml

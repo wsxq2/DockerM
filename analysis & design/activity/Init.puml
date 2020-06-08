@@ -1,0 +1,24 @@
+@startuml
+title Init and Login Module
+|PrimaryController|
+start
+:create Dialog;
+repeat
+:input portainerURL, Username, Password, Init;
+repeat while (input is valid?) is (no)
+|CallApiUtil|
+partition Constructor {
+if (Init?) then (yes)
+:POST /users/admin/init;
+endif
+:POST /auth;
+:set Authorization header;
+}
+|PrimaryController|
+if (success?) then (no)
+stop
+endif
+:load Endpoints;
+stop
+
+@enduml

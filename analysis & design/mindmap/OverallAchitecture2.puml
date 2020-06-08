@@ -1,0 +1,20 @@
+@startmindmap
+* **DockerM**
+ * Init
+  * create an Administrator account
+ * Login
+ * Endpoints
+  * Containers
+  * Images
+  * Volumes
+  * Network
+  * Info
+  * Groups
+  * Tags
+  * view Events
+ * Users
+ * Teams
+ * App Templates
+ * Registries
+ * Settings
+@endmindmap

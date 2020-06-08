@@ -1,0 +1,14 @@
+{
+  "Containers": -1,
+  "Created": 1588994209,
+  "Id": "sha256:f29bb3d174b5750aecb822c3dc16b5226133c78a71ef72572dfa98b0e3d378a2",
+  "Labels": {},
+  "ParentId": "sha256:2869fc110bf706fd70120a66dadc621d4969cf9b943c0e10be13867284331540",
+  "RepoDigests": null,
+  "RepoTags": [
+    "potainertest:latest"
+  ],
+  "SharedSize": -1,
+  "Size": 78648125,
+  "VirtualSize": 78648125
+}

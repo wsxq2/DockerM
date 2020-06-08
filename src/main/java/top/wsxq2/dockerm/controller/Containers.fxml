@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="919.0" prefWidth="921.0" spacing="10.0"
+      xmlns="http://javafx.com/javafx/11.0.1" fx:controller="top.wsxq2.dockerm.controller.ContainersController">
+    <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Containers"/>
+        <Separator prefWidth="200.0"/>
+        <HBox spacing="10.0">
+            <children>
+                <Button fx:id="addContainerB" mnemonicParsing="false" onAction="#handleAddContainerB" text="Add"/>
+                <Button fx:id="addContainerB1" mnemonicParsing="false" onAction="#handleAddContainerB" text="Remove"/>
+            </children>
+        </HBox>
+        <TextField fx:id="searchTF" onAction="#handleSearchTF" promptText="Search"/>
+        <TableView fx:id="containerOverviewTableView" prefHeight="870.0" prefWidth="881.0"
+                   tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="75.0" text="index"/>
+                <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name"/>
+                <TableColumn fx:id="stateCol" prefWidth="75.0" text="State"/>
+                <TableColumn fx:id="imageCol" prefWidth="75.0" text="Image"/>
+                <TableColumn fx:id="createdCol" prefWidth="75.0" text="Created"/>
+                <TableColumn fx:id="IPAddressCol" prefWidth="75.0" text="IP address"/>
+                <TableColumn fx:id="publishedPortsCol" prefWidth="75.0" text="Published Ports"/>
+                <TableColumn fx:id="accessControlCol" prefWidth="75.0" text="Access control"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+</VBox>

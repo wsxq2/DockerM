@@ -1,0 +1,37 @@
+@startuml
+hide empty description
+state "loaded Endpoint" as EndpointsPage{
+[*] -> showEndpoints
+showEndpoints -> clickedEndpoint : click special Endpoint
+state clickedEndpoint{
+[*] -> showEndpointInfo: default
+note left of showEndpointInfo: NP is Navigate Pane
+showEndpointInfo: also show Navigate pane\nalse show Endpoint Overview
+showEndpointInfo --> showContainers : click Containers
+showEndpointInfo --> showImages : click Images
+showEndpointInfo --> showVolumes : click Volumes
+showEndpointInfo --> showNetworks : click Networks
+[*] --> showTemplates: click Templates in NP
+[*] --> showEndpointInfo: click Host in NP
+[*] --> showContainers: click Containers in NP
+[*] --> showImages: click Images in NP
+[*] --> showNetworks: click Networks in NP
+[*] --> showVolumes: click Volumes in NP
+[*] --> showEvents: click Events in NP
+showContainers: also show Navigate pane
+showContainers --> extraShowContainersDetails: click special Container
+showImages --> extraShowImagesDetails: click special Image
+showNetworks --> extraShowNetworksDetails: click special Network
+showVolumes --> extraShowVolumesDetails: click special Volume
+showTemplates --> extraShowTemplatesDetails: click special Template
+showImages: also show Navigate pane
+showNetworks: also show Navigate pane
+showVolumes: also show Navigate pane
+showTemplates: also show Navigate pane
+
+}
+clickedEndpoint --> showEndpoints: click Home in NP
+showEndpoints -> addEndpoint : Add
+addEndpoint -> showEndpoints: click Close
+}
+@enduml

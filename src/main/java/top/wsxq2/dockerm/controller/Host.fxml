@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/11.0.1"
+      fx:controller="top.wsxq2.dockerm.controller.HostController">
+   <children>
+      <HBox alignment="CENTER" onMouseClicked="#handleContainers" prefHeight="100.0" prefWidth="200.0" spacing="5.0"
+            style="-fx-border-color: black;">
+         <children>
+            <Text fx:id="nContainersT" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Containers"/>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" onMouseClicked="#handleImages" prefHeight="100.0" prefWidth="200.0" spacing="5.0"
+            style="-fx-border-color: black;">
+         <children>
+            <Text fx:id="nImagesT" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Images"/>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" onMouseClicked="#handleNetworks" prefHeight="100.0" prefWidth="200.0" spacing="5.0"
+            style="-fx-border-color: black;">
+         <children>
+            <Text fx:id="nNetworksT" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Networks"/>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" onMouseClicked="#handleVolumes" prefHeight="100.0" prefWidth="200.0" spacing="5.0"
+            style="-fx-border-color: black;">
+         <children>
+            <Text fx:id="nVolumesT" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Volumes"/>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+   </padding>
+</VBox>

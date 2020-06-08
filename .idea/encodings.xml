@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/wsxq2/dockerm/controller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/wsxq2/dockerm/controller/AccessControlController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/wsxq2/dockerm/controller/ContainerAddController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/wsxq2/dockerm/controller/ContainerAttachController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/wsxq2/dockerm/controller/ContainerConsoleController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/wsxq2/dockerm/controller/ContainerDetailsController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/wsxq2/dockerm/controller/ContainerInspectController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/top/wsxq2/dockerm/controller/ContainerLogController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

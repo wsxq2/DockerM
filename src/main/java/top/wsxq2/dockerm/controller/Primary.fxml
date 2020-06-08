@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="913.0" prefWidth="1425.0" xmlns="http://javafx.com/javafx/11.0.1"
+      fx:controller="top.wsxq2.dockerm.controller.PrimaryController">
+    <children>
+        <MenuBar prefWidth="1284.0" VBox.vgrow="NEVER">
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <MenuItem onAction="#handleFileNew" text="New">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem onAction="#handleFileOpen" text="Open…">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <Menu onAction="#handleFileOpenRecent" text="Open Recent">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </Menu>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem onAction="#handleFileSave" text="Save">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem onAction="#handleFileSaveAs" text="Save As…"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem onAction="#handleFileClose" text="Close">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="W" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem onAction="#handleFileQuit" text="Quit">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu text="Settings">
+                    <items>
+                        <MenuItem onAction="#handleSettingsBasic" text="Basic">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="B" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem onAction="#handleSettingsRegistries" text="Registries">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem onAction="#handleSettingsUsers" text="Users">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="U" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem onAction="#handleSettingsTeams" text="Teams">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem onAction="#handleSettingsGroups" text="Groups">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="G" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem onAction="#handleSettingsTags" text="Tags">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu text="Help">
+                    <items>
+                        <MenuItem onAction="#handleHelpShortcuts" text="Shortcuts">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="K" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem onAction="#handleHelpHelp" text="Help">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem onAction="#handleHelpAbout" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane fx:id="splitPane" dividerPositions="0.125, 0.5152877697841727" focusTraversable="true"
+                   prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <items>
+                <AnchorPane fx:id="leftPane" SplitPane.resizableWithParent="false">
+                    <children>
+                        <Button fx:id="homeB" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                                onAction="#handleHome" prefHeight="30.0" text="Home" AnchorPane.leftAnchor="0.0"
+                                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                        <Button fx:id="appTemplatesB" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="50.0"
+                                mnemonicParsing="false" onAction="#handleAppTemplates" prefHeight="30.0"
+                                prefWidth="133.0" text="App Templates" AnchorPane.leftAnchor="0.0"
+                                AnchorPane.rightAnchor="0.0"/>
+                        <Button fx:id="containersB" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="100.0"
+                                mnemonicParsing="false" onAction="#handleContainers" prefHeight="30.0" text="Containers"
+                                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                        <Button fx:id="imagesB" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="130.0"
+                                mnemonicParsing="false" onAction="#handleImages" prefHeight="30.0" text="Images"
+                                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                        <Button fx:id="networksB" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="160.0"
+                                mnemonicParsing="false" onAction="#handleNetworks" prefHeight="30.0" text="Networks"
+                                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                        <Button fx:id="volumesB" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="190.0"
+                                mnemonicParsing="false" onAction="#handleVolumes" prefHeight="30.0" prefWidth="100.0"
+                                text="Volumes" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                        <Button fx:id="eventsB" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="288.0"
+                                mnemonicParsing="false" onAction="#handleEvents" prefHeight="30.0" text="Events"
+                                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                        <Button fx:id="hostB" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutY="240.0"
+                                mnemonicParsing="false" onAction="#handleHost" prefHeight="30.0" text="Host"
+                                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+                <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="489.0" prefWidth="703.0">
+                    <content>
+                        <AnchorPane id="Content" fx:id="middlePane" minHeight="-1.0" minWidth="-1.0" prefHeight="657.0"
+                                    prefWidth="563.0"/>
+                    </content>
+                </ScrollPane>
+                <AnchorPane fx:id="rightPane" prefHeight="665.0" prefWidth="538.0"/>
+            </items>
+        </SplitPane>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="11.0" fx:id="x3"/>
+                    </font>
+                    <textFill>
+                        <Color blue="0.625" green="0.625" red="0.625" fx:id="x4"/>
+                    </textFill>
+                </Label>
+                <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS"/>
+                <Label font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER"/>
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+            </padding>
+        </HBox>
+    </children>
+</VBox>

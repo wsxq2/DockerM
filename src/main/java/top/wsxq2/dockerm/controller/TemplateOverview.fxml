@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1"
+      fx:controller="top.wsxq2.dockerm.controller.TemplateOverviewController">
+   <children>
+      <ImageView fx:id="logoIV" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true"/>
+      <VBox prefHeight="58.0" prefWidth="419.0" spacing="5.0">
+         <children>
+            <Text fx:id="titleT" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="24.0"/>
+               </font>
+            </Text>
+            <Text fx:id="descriptionT" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="16.0"/>
+               </font>
+            </Text>
+            <HBox spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category:"/>
+                  <Text fx:id="categoriesT" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

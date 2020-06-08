@@ -1,0 +1,25 @@
+@startuml
+hide empty description
+
+'[*] -> WizardOpened: click File-New
+[*] -> checkInputAndFeedback: input Portainer URL
+checkInputAndFeedback --> inputtingUsernameAndPassword: click Next
+inputtingUsernameAndPassword -> checkInputAndFeedback: input Username, Password, Init
+checkInputAndFeedback -> [*] : click Finish
+
+'[*] -> Started : start DockerM
+'Started: Home Pane is null
+'
+'state handlingSave{
+'[*] --> SavingFile : click File->Save
+'SavingFile --> [*] : select Folder and input file name
+'}
+'
+'state handlingNew{
+'Started -> creatingNewSession : click File->New
+'creatingNewSession -> loadingEndpointsInfo : input portainer URL, User, Password, Init
+'Started2 : Home Pane is not null
+'}
+
+
+@enduml

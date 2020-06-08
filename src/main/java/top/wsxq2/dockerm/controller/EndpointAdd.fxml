@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.CheckComboBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0" spacing="10.0"
+      xmlns="http://javafx.com/javafx/11.0.1" fx:controller="top.wsxq2.dockerm.controller.EndpointAddController">
+    <children>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label text="Environment type"/>
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1">
+                    <children>
+                        <RadioButton id="DockerAPI" fx:id="dockerAPITB" mnemonicParsing="false" selected="true"
+                                     text="Docker API">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="environmentTypeTG"/>
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton id="PortainerAgent" fx:id="portainerAgentTB" mnemonicParsing="false"
+                                     text="Portainer Agent" toggleGroup="$environmentTypeTG"/>
+                    </children>
+                </HBox>
+            </children>
+        </GridPane>
+        <Separator prefWidth="200.0"/>
+        <GridPane vgap="5.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label text="Name"/>
+                <Label text="URL" GridPane.rowIndex="1"/>
+                <TextField id="Name" fx:id="nameField" promptText="e.g. abc" GridPane.columnIndex="1"/>
+                <TextField id="URL" fx:id="urlFiled" promptText="e.g. http://192.168.56.11:1234"
+                           GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            </children>
+        </GridPane>
+        <Separator prefWidth="200.0"/>
+        <GridPane vgap="5.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label text="Group"/>
+                <Label text="Tags" GridPane.rowIndex="1"/>
+                <ComboBox id="Group" fx:id="endpointGroupCB" prefWidth="150.0" GridPane.columnIndex="1"/>
+                <CheckComboBox id="Tags" fx:id="tagsCCB" title="" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            </children>
+        </GridPane>
+        <Separator prefWidth="200.0"/>
+        <Button mnemonicParsing="false" onAction="#handleSubmit" text="Submit"/>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+</VBox>

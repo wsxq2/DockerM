@@ -1,0 +1,33 @@
+@startuml
+|CallApiUtil|
+start
+note right : Read
+:get Endpoints;
+|HomeController|
+:draw UI;
+stop
+
+start
+note right : Create/Update
+:create Dialog;
+|EndpointAddController|
+repeat
+:input Endpoint info;
+repeat while (valid?) is (no)
+|HomeController|
+:create/update;
+if (success?) then (no)
+:prompt error;
+stop
+endif
+:refresh Endpoints;
+stop
+
+|EndpointOverviewController|
+start
+note right : Delete
+:delete selected Endpoint;
+stop
+
+
+@enduml

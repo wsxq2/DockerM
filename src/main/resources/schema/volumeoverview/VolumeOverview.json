@@ -1,0 +1,27 @@
+{
+  "CreatedAt": "2020-04-15T10:03:46+08:00",
+  "Driver": "local",
+  "Labels": null,
+  "Mountpoint": "/var/lib/docker/volumes/b2154a755534baf9c3eb5978ce6a021a0a9362340ec4c8f1ca50053c5914ec9a/_data",
+  "Name": "b2154a755534baf9c3eb5978ce6a021a0a9362340ec4c8f1ca50053c5914ec9a",
+  "Options": null,
+  "Portainer": {
+    "ResourceControl": {
+      "AdministratorsOnly": false,
+      "Id": 64,
+      "Public": false,
+      "ResourceId": "b2154a755534baf9c3eb5978ce6a021a0a9362340ec4c8f1ca50053c5914ec9a",
+      "SubResourceIds": [],
+      "System": false,
+      "TeamAccesses": [],
+      "Type": 3,
+      "UserAccesses": [
+        {
+          "AccessLevel": 1,
+          "UserId": 1
+        }
+      ]
+    }
+  },
+  "Scope": "local"
+}
